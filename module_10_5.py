@@ -17,6 +17,7 @@ start = datetime.datetime.now()
 read_info(filenames[1])
 read_info(filenames[2])
 read_info(filenames[3])'''
+
 for name in filenames:
     read_info(name)
 finish = datetime.datetime.now()
@@ -30,23 +31,3 @@ if __name__ == '__main__':
     finish = datetime.datetime.now()
 
     print(finish - start, ' Многопроцессный вызов')  # Многопроцессный вызов
-
-    '''start = datetime.datetime.now()
-    p1 = multiprocessing.Process(target=read_info, args=filenames[0])
-    p2 = multiprocessing.Process(target=read_info, args=filenames[1])
-    p3 = multiprocessing.Process(target=read_info, args=filenames[2])
-    p4 = multiprocessing.Process(target=read_info, args=filenames[3])
-
-    p1.start()
-    p2.start()
-    p3.start()
-    p4.start()
-
-    p1.join()
-    p2.join()
-    p3.join()
-    p4.join()
-
-    finish = datetime.datetime.now()
-    print(finish - start, ' Многопроцессный вызов')  # Многопроцессный вызов'''
-
